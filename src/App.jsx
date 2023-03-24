@@ -10,6 +10,8 @@ import './App.css'
 import '@mdi/font/css/materialdesignicons.css'
 //Componentes
 import Navbar from './components/Navbar';
+import Categorias from './components/Categorias';
+import ModalFilter from './components/ModalFilter';
 
 function App() {
 
@@ -17,6 +19,8 @@ function App() {
   return (
     <div >
       <Navbar />
+      <Categorias />
+      <ModalFilter />
     </div>
   )
 }
