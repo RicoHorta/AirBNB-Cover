@@ -10,7 +10,7 @@ export default function Navbar() {
         <div>
             <nav className='nav-topo'>
                 <div className='container-airbnb'>
-                    <div className='d-flex aling-items-center col-sm-6'>
+                    <div className='d-flex align-items-center col-sm-6'>
                         <img className='logo' src={logo} alt="logo do site" />
                     </div>
                     <div className='d-flex align-items-center justify-content-end col-sm-6'>

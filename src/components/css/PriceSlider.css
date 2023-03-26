@@ -9,8 +9,8 @@
 .slider .progress {
     height: 100%;
     position: absolute;
-    left: 10%;
-    right: 10%;
+    /* left: 10%;
+    right: 10%; */
     background: #464646;
 }
 
@@ -37,12 +37,28 @@ input[type='range']::-webkit-slider-thumb {
     background: white;
     border: 1px solid #ccc;
     border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
     background-image: url('https://img.icons8.com/ios-glyphs/30/000000/menu-rounded.png');
     background-size: 60%;
     background-position: center center;
     background-repeat: no-repeat;
     transform: rotate(90deg);
+    pointer-events: auto;
     -webkit-appearance: none;
-    -moz-appearance: none;
+}
 
+input[type='range']::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    background-image: url('https://img.icons8.com/ios-glyphs/30/000000/menu-rounded.png');
+    background-size: 60%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transform: rotate(90deg);
+    pointer-events: auto;
+    -moz-appearance: none;
 }

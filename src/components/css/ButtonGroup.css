@@ -1,0 +1,20 @@
+.btn-detalhesqtd {
+    padding: 8px 18px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-detalhesqtd:hover {
+    border: 1px solid #161616;
+}
+
+.btn-detalhesqtd.active {
+    padding: 8px 18px;
+    background: #161616;
+    color: white;
+    border: 1px solid #161616;
+    border-radius: 20px;
+    cursor: pointer;
+}
