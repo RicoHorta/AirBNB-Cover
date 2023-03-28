@@ -11,7 +11,7 @@
 }
 
 .link-especial {
-    text-decoration: none;
+    text-decoration: none !important;
     color: #161616;
     font-weight: 500;
     font-size: 15px;
@@ -22,7 +22,30 @@
     background: #eeee;
     border-radius: 20px;
     color: #161616;
-    text-decoration: none;
+    text-decoration: none !important;
+}
+
+.link-hospedes {
+    text-decoration: none !important;
+    color: grey;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 8px;
+}
+
+.link-hospedes:hover {
+    background: #eeee;
+    border-radius: 20px;
+    color: grey;
+    text-decoration: none !important;
+}
+
+.link-barra {
+    text-decoration: none !important;
+    color: #c6c6c6;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 8px;
 }
 
 .icon-nav {
@@ -54,9 +77,25 @@
     border-radius: 30px;
     justify-content: space-around;
     border: 1px solid gray;
+
 }
 
 .button-login:hover {
     color: grey;
+    box-shadow: 2px 2px 3px #c6c6c6;
+}
+
+.button-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #ff5a5f;
+    white-space: nowrap;
+    width: 460px;
+    height: 55px;
+    border-radius: 30px;
+    justify-content: space-around;
+    border: 1px solid gray;
     box-shadow: 2px 2px 3px #c6c6c6;
 }

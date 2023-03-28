@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 //Bootstrap 5.3
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap';
@@ -12,6 +10,7 @@ import '@mdi/font/css/materialdesignicons.css'
 import Navbar from './components/Navbar';
 import Categorias from './components/Categorias';
 import ModalFilter from './components/ModalFilter';
+import Card from './components/Card';
 
 function App() {
 
@@ -20,6 +19,7 @@ function App() {
     <div >
       <Navbar />
       <Categorias />
+      <Card />
       <ModalFilter />
     </div>
   )

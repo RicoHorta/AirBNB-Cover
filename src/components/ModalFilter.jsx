@@ -2,13 +2,13 @@ import React from 'react'
 //PriceSlider
 import PriceSlider from './PriceSlider';
 import ButtonGroup from './ButtonGroup';
-
+import CardGroup from './CardGroup';
 
 export default function ModalFilter() {
     return (
         // modal-live bootStrap
         <div className="modal fade" id="filterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div className="modal-dialog modal-lg modal-dialog-centered modal-dialogue-scrollable ">
+            <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
                 <div className="modal-content">
                     <div className="modal-header text-center">
                         <button type="button" className="fs-6 btn-close opacity-100" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -61,10 +61,22 @@ export default function ModalFilter() {
                             <p className='mt-3 px-1'>Banheiros</p>
                             <ButtonGroup buttons={["Qualquer um", "1", "2", "3", "4", "5", "6", "7", "8+"]} />
                         </section>
+                        <section className='px-2 mb-4 border-bottom'>
+                            <span className='fs-4 fw-bold'>Tipo de propriedade</span>
+                            <CardGroup
+                                options={[
+                                    { icon: "mdi mdi-home-outline", text: "Casa" },
+                                    { icon: "mdi mdi-domain", text: "Apartamento" },
+                                    { icon: "mdi mdi-home-import-outline", text: "Casa de hóspedes" },
+                                    { icon: "mdi mdi-office-building-outline", text: "Hotel" },
+                                ]} />
+
+                        </section>
                     </div>
-                    <div className="modal-footer">
-                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" className="btn btn-primary">Save changes</button>
+                    <div className="modal-footer d-flex justify-content-between">
+                        <a href="#" className='link-dark fw-bold ps-2'>Remover filtros</a>
+                        <button type="button" className="btn btn-dark fw-bold py-3 px-4" data-bs-dismiss="modal">Mostrar X acomodações</button>
+
                     </div>
                 </div>
             </div>

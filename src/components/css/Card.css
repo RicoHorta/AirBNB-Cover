@@ -1,0 +1,103 @@
+.heartAnimation {
+    background-image: url('../../img/web_heart_animation_outline.png');
+    background-position: left;
+    background-size: 2900%;
+    margin: 0 auto;
+    width: 80px;
+    height: 50px;
+    z-index: 999;
+    opacity: 0.5;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+
+.animate {
+    animation: heart-burst 0.8s steps(28) forwards;
+}
+
+@keyframes heart-burst {
+    0% {
+        background-position: left;
+        opacity: 0.7;
+    }
+
+    100% {
+        background-position: right;
+        opacity: 1;
+    }
+
+}
+
+
+.swiper.img-content {
+    width: 100%;
+    height: 280px;
+    border-radius: 15px;
+}
+
+.swiper-slide.swiperImg {
+    width: 100% !important;
+    height: 280px !important;
+    opacity: 1 !important;
+}
+
+.swiper.img-content .swiper-pagination-bullet-active {
+    background-color: white !important;
+}
+
+.swiper.img-content:hover .swiper-button-next {
+    box-shadow: none !important;
+    display: flex;
+}
+
+.swiper.img-content .swiper-button-next {
+    box-shadow: none !important;
+    display: none;
+}
+
+.cardImage {
+    width: 100% !important;
+    height: 280px !important;
+    object-fit: cover;
+    object-position: left center;
+}
+
+/*Declaração inicial*/
+
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/*Medias queries */
+
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}

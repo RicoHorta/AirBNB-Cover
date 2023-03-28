@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30">
+	<title>Novo Projeto</title>
+	<defs>
+		<image  width="30" height="30" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAAAXNSR0IB2cksfwAAAU1QTFRFAAAA/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pf/1pfMX2FvwAAAG90Uk5TAAEJPHys0OP08+HOqXg3CAANO+/7/f7//PruzDYLbMb29cBkAy2Y+fePKAI0pfDtnaJpYAo9yH92BzN16Wqm+JzV7Ovo06OZcedmzcUvffJzBjnDujJjWCub6pQmjIQiXb3xuFYFcnAwy+Deyp9tp81x7wAAAUNJREFUeJx90/tXAVEQB/DZTZtN7HrsHcqWFBGlhxSp1SpUpO2d9NL7+f//2JK0B3fn18+5c2bO/Q7AbzHsgGWQG7Lyw7YRu0NgwFii02Xh3B6JIJG8vtExu18W/5WRxycCaKjJ4BTb8elQeAa7KhKdjbXfxufmuxUxsRBqvRflRb5XEd1hoenOpZ7O7f7LSYDYSqq/Igb9DCRXAzTm19Lg4miKmMrAeoLO2Q3Y9NFZycGWRGcvByqhs5QFha766qZMApA3a74NO2aj2aBgslikCCWVzrt74Ninc7kC7AH1S6qHGjBHxxQlJ6d6YOUzyurWc7YZJrbYJ2qIalRrhY25uOwzfe2q3o5yrH7dPR6x3tx2LkVM391Xjdp4eHwynImYzDyn8op+RUTyKLXyy6tg0OYAWrxUeHvnGx+fX98V7a/xDwTXWlk+rljZAAAAAElFTkSuQmCC"/>
+		<image  width="16" height="16" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IB2cksfwAAAKhQTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////I9c9bQAAADh0Uk5TAAwkMS0ZAzCQ2/nzu2wUiN+TKAZUt+NpDpmiGBzvUNynnIa5i7gavNOAQt09y4XndATJAjwpKgj72727AAAAm0lEQVR4nFWNWRKCMBBEk4AYQZBd9kVA2ZQgqPe/mQaIBf3RM/O6ugaAnyDi+J0A/trjgygdZYXdJ1XTDWhaNlpy9ezQiVzPn/pYc+YkCKMpiHXWTVLqnGgwcMmo8xJkIC+oX28mA2VFXZCt+Z1QN+20KLYb0Fnf8VJGXpg88rLBHeln4kdpVlQtJE8ygLV60o1bMozxC2zJ+/MFkOYLE+f5CfYAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Layer 1" href="#img1" x="0" y="0"/>
+	<use id="Camada 2" href="#img2" x="7" y="7"/>
+</svg>
