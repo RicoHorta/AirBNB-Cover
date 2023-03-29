@@ -6,18 +6,21 @@ import '../App.css';
 import logo from '../img/logo-airbnb-Navbar.svg';
 import lupa from '../img/Lupa-40px.svg';
 
+
 export default function Navbar() {
+
+
     return (
         <div>
-            <nav className='nav-topo'>
+            <nav style={{ position: 'fixed', top: 0, zIndex: 999 }} className='nav-topo'>
                 <div className='container-airbnb'>
-                    <div className='col-sm-3 d-flex  border border-danger'>
+                    <div className='ps-lg-4 col-12 col-lg-3 d-flex justify-content-center justify-content-lg-start align-items-center'>
                         <img className='logo' src={logo} alt="logo do site" />
                     </div>
-                    <div className='col-sm-5 d-flex align-items-center border border-danger'>
+                    <div className='d-none d-xl-flex col-sm-5 align-items-center'>
                         <a className="button-middle ps-2 ms-5" href="#" role="button"  >
-                            <div className='d-inline'>
-                                <a className=' link-especial' href="#">Qualquer lugar</a>
+                            <div className='d-inline text-truncate'>
+                                <a className='link-especial' href="#">Qualquer lugar</a>
                                 <a className='link-barra' href="#">|</a>
                                 <a className='link-especial' href="#">Qualquer semana</a>
                                 <a className='link-barra' href="#">|</a>
@@ -26,8 +29,8 @@ export default function Navbar() {
                             <img className='icon-nav fs-2 position-relative ' src={lupa}></img>
                         </a>
                     </div>
-                    <div className='col-sm-4 d-flex align-items-center justify-content-end border border-danger'>
-                        <a className='link-especial px-2' href="#">Anuncie seu espaço no Airbnb</a>
+                    <div className='d-none d-lg-flex col-sm-4 align-items-center justify-content-end'>
+                        <a className='link-especial px-2 text-truncate' href="#">Anuncie seu espaço no Airbnb</a>
                         <a className='icon-nav mx-1' href="#"><i className='mdi mdi-web'></i></a>
                         <div className='dropdown ms-2' >
                             <a className="button-login dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,6 +51,20 @@ export default function Navbar() {
                         </div>
                     </div>
                 </div>
+            </nav>
+            <nav id='mobile' className=' px-6 d-sm-none bg-white fixed-bottom align-items-center d-flex justify-content-around'>
+                <a href="#" className='d-flex flex-column text-center nav-icon active'>
+                    <i className='fs-2 mdi mdi-magnify'></i>
+                    <span style={{ color: '#a1a1a1', fontSize: '15px' }}>Explorar</span>
+                </a>
+                <a href="#" className='d-flex flex-column text-center nav-icon'>
+                    <i className='fs-2 mdi mdi-heart-outline'></i>
+                    <span style={{ color: '#a1a1a1', fontSize: '15px' }}>Favoritos</span>
+                </a>
+                <a href="#" className='d-flex flex-column text-center nav-icon'>
+                    <i className='fs-2 mdi mdi-account-circle'></i>
+                    <span style={{ color: '#a1a1a1', fontSize: '15px' }}>Entrar</span>
+                </a>
             </nav>
         </div>
     )

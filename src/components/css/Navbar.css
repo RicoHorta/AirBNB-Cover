@@ -99,3 +99,35 @@
     border: 1px solid gray;
     box-shadow: 2px 2px 3px #c6c6c6;
 }
+
+nav#mobile {
+    height: 70px;
+    /* border: 1px solid red; */
+
+}
+
+.nav-icon {
+    color: #a1a1a1;
+    /* border-top: 1px solid #a1a1a1; */
+    text-decoration: none;
+    width: 100%;
+
+}
+
+.nav-icon:focus {
+    color: #ff5a5f;
+    /* border-top: 1px solid grey; */
+    text-decoration: none;
+    width: 100%;
+
+}
+
+.nav-icon.active {
+    color: #ff5a5f;
+    /* border-top: 3px solid #ff5a5f; */
+}
+
+.nav span {
+    color: #a1a1a1;
+    font-size: 15px !important;
+}

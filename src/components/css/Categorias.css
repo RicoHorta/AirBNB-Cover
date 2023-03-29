@@ -108,3 +108,13 @@
     height: 50px;
     justify-content: center;
 }
+
+@media screen and (max-width:575px) {
+    .swiper-button-prev {
+        display: none !important;
+    }
+
+    .swiper-button-next {
+        display: none !important;
+    }
+}
