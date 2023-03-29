@@ -3,8 +3,8 @@ import React from 'react'
 import PriceSlider from './PriceSlider';
 import ButtonGroup from './ButtonGroup';
 import CardGroup from './CardGroup';
-
-export default function ModalFilter() {
+//recebe a função filterByPrice inteira do modalFilter via props e reenvia para o PriceSlider
+export default function ModalFilter({ itens, filterByPrice, catID, resetFilter }) {
     return (
         // modal-live bootStrap
         <div className="modal fade" id="filterModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -18,7 +18,8 @@ export default function ModalFilter() {
                         <section className='px-2 mb-4 border-bottom'>
                             <span className='fs-4 fw-bold'>Faixa de preço</span>
                             <p className='mb-5 text-muted'>O Preço médio por noite é R$713</p>
-                            <PriceSlider min={50} max={2000} step={1} />
+                            {/* //recebe a função filterByPrice inteira do modalFilter via props e reenvia para o PriceSlider */}
+                            <PriceSlider filterByPrice={filterByPrice} catID={catID} min={50} max={2000} step={1} />
                         </section>
                         <section className='px-2 mb-4 border-bottom'>
                             <span className='fs-4 fw-bold'>Tipo de Lugar</span>
@@ -74,8 +75,8 @@ export default function ModalFilter() {
                         </section>
                     </div>
                     <div className="modal-footer d-flex justify-content-between">
-                        <a href="#" className='link-dark fw-bold ps-2'>Remover filtros</a>
-                        <button type="button" className="btn btn-dark fw-bold py-3 px-4" data-bs-dismiss="modal">Mostrar X acomodações</button>
+                        <a href="#" onClick={() => { resetFilter(catID) }} className='link-dark fw-bold ps-2' data-bs-dismiss="modal">Remover filtros</a>
+                        <button type="button" className="btn btn-dark fw-bold py-3 px-4" data-bs-dismiss="modal">Mostrar {itens.length} acomodações</button>
 
                     </div>
                 </div>

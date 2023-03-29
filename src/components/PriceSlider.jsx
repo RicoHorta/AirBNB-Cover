@@ -2,7 +2,7 @@ import React from 'react'
 // CSS
 import './css/PriceSlider.css'
 import { useState, useEffect } from 'react';
-
+//recebe a função filterByPrice inteira do modalFilter via props e reenvia para o PriceSlider
 export default function PriceSlider(props) {
 
     // useState - variáveis que recebem as props passadas pelo Modal/PriceSlider progress para mover as bolinhas do slider
@@ -41,6 +41,8 @@ export default function PriceSlider(props) {
             //se não, recebe o valor que recebeu do estado(e) onChange
             document.getElementById('inputMin').value = min;
         }
+        //recebe a função filterByPrice inteira do modalFilter via props e reenvia para o PriceSlider
+        props.filterByPrice(props.catID, min, max);
     }, [min]);
 
     function ChangRangeMax(e) {
@@ -65,6 +67,8 @@ export default function PriceSlider(props) {
         } else {
             document.getElementById('inputMax').value = max;
         }
+        //recebe a função filterByPrice inteira do modalFilter via props e reenvia para o PriceSlider
+        props.filterByPrice(props.catID, min, max);
     }, [max]);
 
     //função de validação nos dados min e max em R$

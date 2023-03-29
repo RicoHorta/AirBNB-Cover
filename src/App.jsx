@@ -12,9 +12,10 @@ import Navbar from './components/Navbar';
 import Categorias from './components/Categorias';
 import ModalFilter from './components/ModalFilter';
 import Card from './components/Card';
+import Skeleton from './components/Skeleton';
 
 function App() {
-  //Estado responsável por saber se está carregando os Dados da API
+  //Estado responsável por saber se está carregando os Dados da API usado na condição do Skeleton também
   const [isLoading, setLoading] = useState(true);
   //Estado que carrega a CATEGORIA (Categoria inicia com 1 - Frente pra praia)
   const [catID, setCatID] = useState(1);
@@ -35,6 +36,7 @@ function App() {
         throw new Error('Problemas com a API!');
       }).then((respostaJSON) => {
         setAllHouses(respostaJSON); //Alimentando o Array allHouses
+        setLoading(false); //para que seja feita a validação lá embaixo e apareça o Skeleton)
       }).catch((error) => {
         console.log(error);
       })
@@ -43,13 +45,13 @@ function App() {
 
   //Para conferir se esta puxando os dados da API
   useEffect(() => {
-    console.log(allHouses)
-    filterByID(catID)  // acrescentado depois para ver as acomodações depois de filtradas
+    //  console.log(allHouses)
+    filterByID(catID);  // acrescentado depois para ver as acomodações depois de filtradas
   }, [allHouses])
   //Para conferir se esta filtrando pela categoria ID
-  useEffect(() => {
-    console.log(filterHouses)
-  }, [])
+  // useEffect(() => {
+  //   console.log(filterHouses)
+  // }, [])
 
   //funcao para que o filterByID seja filtrado por categoria
 
@@ -58,22 +60,49 @@ function App() {
     filterByID(id);
   }
 
-
   //função para filtrar por categoria
   const filterByID = (id) => {
     const novaLista = allHouses.filter((item) => {
       return item.categoria === id;
     })
-    //envia resultado do filtro para filterHouses
+    //envia resultado do filtro para filterHouses por - FILTRAR POR CATEGORIAID
     setFilterHouses(novaLista);
+  }
+  //Cálculos e funcionamento do priceSlider no modal Filter - FILTRAR POR PREÇO
+
+  const filterByPrice = (catID, min, max) => {
+    const novaLista = allHouses.filter((item) => {
+      return item.categoria === catID && item.preco >= min && item.preco <= max;
+    })
+    //envia resultado do filtro para filterHouses por - FILTRAR POR CATEGORIAID
+    setFilterHouses(novaLista);
+  }
+
+  // Função para ressetar Filtros no modal
+  const resetFilter = (id) => {
+    filterByID(id);
   }
 
   return (
     <div >
       <Navbar />
       <Categorias changeCat={changeCat} />
-      <Card dados={filterHouses} />
-      <ModalFilter />
+      {/* //Validação para aparecer o Skeleton */}
+      {
+        isLoading ?
+          <div style={{ paddingTop: '180px' }} className='container-airbnb row'>
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+          </div>
+          :
+          <Card dados={filterHouses} />
+      }
+      {/* //envia a função filterByPrice inteira para o modalFilter que recebe via props e reenvia para o PriceSlider */}
+      <ModalFilter resetFilter={resetFilter} filterByPrice={filterByPrice} catID={catID} itens={filterHouses} />
     </div>
   )
 }
