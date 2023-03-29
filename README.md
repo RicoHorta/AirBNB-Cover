@@ -1,5 +1,5 @@
 # airbnb-cover
-Site Cover do AirBNB - React - Vite - Js - BootStrap - npm <br>
+<b2>Site Cover do AirBNB - React - Vite - Js - BootStrap - npm</h2> <br>
 <h1>https://www.peoplemuriae.com.br/airbnb-cover/</h1><br>
 <img src='https://user-images.githubusercontent.com/125682179/228633360-a7bb503e-509d-407f-9fef-3136e6b7bb8e.png'>
 <br>
